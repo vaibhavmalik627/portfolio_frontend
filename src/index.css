@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* ✅ Fixed this line */
+}
+
+.section-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Soft highlight */
+  z-index: 10;
+}
