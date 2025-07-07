@@ -1,56 +1,49 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
-export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+const navLinks = [
+  { name: "Home", to: "#home" },
+  { name: "About", to: "#about" },
+  { name: "Projects", to: "#projects" },
+  { name: "Contact", to: "#contact" },
+];
+
+function Navbar() {
+  const [active, setActive] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "contact"];
-      const scrollPos = window.scrollY + 100;
-
-      for (let id of sections) {
-        const section = document.getElementById(id);
-        if (section && scrollPos >= section.offsetTop) {
-          setActiveSection(id);
-        }
+      const sections = ["home", "about", "projects", "contact"];
+      const scrollY = window.scrollY + 100;
+      for (let sec of sections) {
+        const el = document.getElementById(sec);
+        if (el && scrollY >= el.offsetTop) setActive(sec.charAt(0).toUpperCase() + sec.slice(1));
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuIconUrl = "https://img.icons8.com/ios-filled/50/menu--v1.png";
-  const closeIconUrl = "https://img.icons8.com/ios-filled/50/delete-sign.png";
-
   return (
-    <nav className={`${styles.navbar} section-hover`}>
-      <a className={styles.title} href="/">Portfolio</a>
-      <div className={styles.menu}>
-        <img
-          className={styles.menuBtn}
-          src={menuOpen ? closeIconUrl : menuIconUrl}
-          alt="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-        <ul
-          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
-          onClick={() => setMenuOpen(false)}
-        >
-          {["about", "experience", "projects", "contact"].map((section) => (
-            <li key={section}>
-              <a
-                href={`#${section}`}
-                className={activeSection === section ? styles.active : ""}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>
+        <span>Vaibhav Malik</span>
       </div>
+      <ul className={styles.links}>
+        {navLinks.map((link) => (
+          <li key={link.name}>
+            <a
+              href={link.to}
+              className={active === link.name ? styles.active : ""}
+              onClick={() => setActive(link.name)}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
-};
+}
+
+export default Navbar;
