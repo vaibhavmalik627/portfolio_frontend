@@ -1,20 +1,64 @@
-.projects {
-  padding: 56px 0 40px 0;
-  margin-bottom: 32px;
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.09);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: box-shadow 0.18s, transform 0.18s;
 }
 
-.heading {
-  font-size: 2rem;
+.card:hover {
+  box-shadow: 0 8px 28px 0 rgba(44, 62, 80, 0.15);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.title {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #23272f;
-  text-align: center;
-  margin-bottom: 32px;
+  margin: 0 0 0.5rem 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+.description {
+  color: #4a4f5c;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  background: #eaf0ff;
+  color: #3071e7;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  color: #3071e7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+  padding-bottom: 1px;
+  border-bottom: 1.5px solid #3071e7;
+}
+
+.link:hover {
+  color: #225bcc;
+  border-bottom: 1.5px solid #225bcc;
 }
