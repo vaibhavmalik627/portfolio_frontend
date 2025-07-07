@@ -1,10 +1,18 @@
 .app {
   font-family: 'Inter', 'Lato', Arial, sans-serif;
-  background: #f7f8fa;
+  background: linear-gradient(135deg,#f7f8fa 70%, #e8ecf5 100%);
   color: #23272f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* Soft fade-in animation for the whole app */
+  opacity: 0;
+  animation: appFadeIn 0.8s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes appFadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 main {
@@ -13,6 +21,7 @@ main {
   margin: 0 auto;
   max-width: 900px;
   padding: 40px 16px 0 16px;
+  /* Section fade-in on scroll: apply .fade-in class in React for effect */
 }
 
 .footer {
@@ -22,4 +31,27 @@ main {
   font-size: 0.98rem;
   background: none;
   letter-spacing: 0.01em;
+  border-top: 1px solid #e4e8ef;
+  background: #fafbfc;
+  /* Subtle fade-in for footer */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: footerFadeIn 1.2s 0.2s cubic-bezier(.4,0,.2,1) forwards;
 }
+@keyframes footerFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 650px) {
+  main {
+    padding: 30px 6px 0 6px;
+    max-width: 100vw;
+  }
+  .footer {
+    font-size: 0.93rem;
+    padding: 18px 0 10px 0;
+  }
