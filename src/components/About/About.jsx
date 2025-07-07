@@ -1,45 +1,30 @@
 import React from "react";
 import styles from "./About.module.css";
 
-export const About = () => {
+function About() {
   return (
-    <section className={`${styles.container} section-hover`} id="about">
-      <h2 className={styles.title}>About</h2>
+    <section id="about" className={styles.about}>
+      <h2 className={styles.heading}>About Me</h2>
       <div className={styles.content}>
         <img
-          src="https://tse3.mm.bing.net/th/id/OIP.SzX0iCAK-VJhqynXwcqZsQHaE7?rs=1&pid=ImgDetMain"
-          alt="Me sitting with a laptop"
-          className={styles.aboutImage}
+          src="https://avatars.githubusercontent.com/u/124840083?v=4"
+          alt="Vaibhav Malik"
+          className={styles.avatar}
         />
-        <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img
-              src="https://img.icons8.com/ios-filled/50/cursor.png"
-              alt="Cursor icon"
-              className={styles.icon}
-            />
-            <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
-              <p>
-                I'm a student from Dayanand Sagar College (DSCE), pursuing web development.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img
-              src="https://img.icons8.com/ios-filled/50/server.png"
-              alt="Server icon"
-              className={styles.icon}
-            />
-            <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
-              <p>
-                I'm learning backend development and building real-world projects.
-              </p>
-            </div>
-          </li>
-        </ul>
+        <div>
+          <p>
+            <strong>Hi! I'm Vaibhav Malik,</strong> a passionate Full Stack Developer dedicated to building impactful digital products. I enjoy crafting scalable web apps, exploring modern JavaScript frameworks, and solving real-world problems with code. My approach is rooted in continuous learning, collaboration, and a drive for excellence.
+          </p>
+          <div className={styles.facts}>
+            <span className={styles.fact}>💻 JavaScript Enthusiast</span>
+            <span className={styles.fact}>🌐 Full Stack Engineer</span>
+            <span className={styles.fact}>🛠️ Problem Solver</span>
+            <span className={styles.fact}>🚀 Always Improving</span>
+          </div>
+        </div>
       </div>
     </section>
   );
-};
+}
+
+export default About;
