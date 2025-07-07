@@ -1,20 +1,24 @@
+import React from "react";
 import styles from "./App.module.css";
-import { About } from "./components/About/About";
-import { Contact } from "./components/Contact/Contact";
-import { Experience } from "./components/Experience/Experience";
-import { Hero } from "./components/Hero/Hero";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className={styles.app}>
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+      <footer className={styles.footer}>
+        <span>&copy; {new Date().getFullYear()} Vaibhav Malik. All Rights Reserved.</span>
+      </footer>
     </div>
   );
 }
