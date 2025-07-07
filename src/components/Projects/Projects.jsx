@@ -14,7 +14,7 @@ const projects = [
   {
     name: "Real Time Tracker",
     description:
-      "A real-time activity tracking application built with JavaScript, EJS, and CSS. Utilizes WebSockets (Socket.IO) for instant, live updates of tracked events, enabling users to monitor activities as they happen in real time.",
+      "A real-time activity tracking application built with JavaScript, EJS, and CSS. Leverages WebSockets (Socket.IO) to deliver instant, live updates of tracked events—allowing users to monitor activities as they happen.",
     tech: ["JavaScript", "EJS", "CSS", "Socket.IO"],
     github: "https://github.com/vaibhavmalik627/real_time-tracker",
     demo: "",
@@ -22,7 +22,7 @@ const projects = [
   {
     name: "Grocery App",
     description:
-      "A comprehensive grocery shopping platform built with the MERN stack (MongoDB, Express, React, Node). Features distinct Seller and Buyer modes, secure authentication, and a seamless order management experience.",
+      "A comprehensive grocery shopping platform using the MERN stack (MongoDB, Express, React, Node). Features distinct Seller and Buyer modes, secure authentication, and seamless order management.",
     tech: ["MongoDB", "Express", "React", "Node"],
     github: "https://github.com/vaibhavmalik627/grocery_app",
     demo: "",
