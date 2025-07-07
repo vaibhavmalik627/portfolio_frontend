@@ -1,82 +1,42 @@
-@import "../../vars.css";
-
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(44, 62, 80, 0.07);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  align-items: center;
+  z-index: 100;
+  padding: 0 2rem;
+  min-height: 64px;
 }
 
-.title {
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-text);
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #3071e7;
+  letter-spacing: 0.04em;
 }
 
-
-.menuBtn {
-  display: none;
-}
-
-.menu {
-  display: flex;
-}
-
-.menuItems {
-  display: flex;
-  gap: 47px;
+.links {
   list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.menuItems a {
-  font-size: 25px;
-  color: var(--color-text);
+.links li a {
   text-decoration: none;
+  color: #23272f;
+  font-weight: 500;
+  transition: color 0.18s;
 }
 
-@media screen and (max-width: 830px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu {
-    position: absolute;
-    right: 0;
-    margin-right: 10%;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 11px;
-    z-index: 3;
-  }
-
-  .menuBtn {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menuItems {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 13px;
-    border-radius: 10px;
-    background: rgb(25, 55, 109);
-    background: linear-gradient(
-      0deg,
-      rgba(25, 55, 109, 0.2) 0%,
-      rgba(25, 55, 109, 1) 100%
-    );
-    padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-  }
-
-  .menuOpen {
-    display: flex;
-    z-index: 1;
-  }
+.links li a:hover,
+.active {
+  color: #3071e7;
+  border-bottom: 2px solid #3071e7;
+  padding-bottom: 2px;
 }
