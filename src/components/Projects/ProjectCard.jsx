@@ -1,37 +1,40 @@
 import React from "react";
-
 import styles from "./ProjectCard.module.css";
-import { getImageUrl } from "../../utils";
 
-export const ProjectCard = ({
-  project: { title, imageSrc, description, skills, demo, source },
-}) => {
+function ProjectCard({ name, description, tech, github, demo }) {
   return (
-    <div className={styles.container}>
-      <img
-        src={getImageUrl(imageSrc)}
-        alt={`Image of ${title}`}
-        className={styles.image}
-      />
-      <h3 className={styles.title}>{title}</h3>
+    <div className={styles.card}>
+      <h3 className={styles.title}>{name}</h3>
       <p className={styles.description}>{description}</p>
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => {
-          return (
-            <li key={id} className={styles.skill}>
-              {skill}
-            </li>
-          );
-        })}
-      </ul>
+      <div className={styles.tech}>
+        {tech.map((t) => (
+          <span className={styles.badge} key={t}>
+            {t}
+          </span>
+        ))}
+      </div>
       <div className={styles.links}>
-        <a href={demo} className={styles.link}>
-          Demo
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          GitHub
         </a>
-        <a href={source} className={styles.link}>
-          Source
-        </a>
+        {demo && (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Live Demo
+          </a>
+        )}
       </div>
     </div>
   );
-};
+}
+
+export default ProjectCard;
