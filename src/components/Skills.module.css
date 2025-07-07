@@ -1,0 +1,60 @@
+.skillsSection {
+  padding: 56px 0 40px 0;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23272f;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.group {
+  flex: 1 1 180px;
+  min-width: 180px;
+  max-width: 230px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.08);
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-bottom: 12px;
+}
+
+.groupHeading {
+  font-size: 1.14rem;
+  font-weight: 600;
+  color: #3071e7;
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: center;
+}
+
+.badge {
+  background: #eaf0ff;
+  color: #3071e7;
+  border-radius: 12px;
+  padding: 7px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
