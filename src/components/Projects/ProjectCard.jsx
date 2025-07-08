@@ -6,9 +6,9 @@ function ProjectCard({ name, description, tech, github, demo }) {
     <div className={styles.card}>
       <h3 className={styles.title}>{name}</h3>
       <p className={styles.description}>{description}</p>
-      <div className={styles.tech}>
+      <div className={styles.skills}>
         {tech.map((t) => (
-          <span className={styles.badge} key={t}>
+          <span className={styles.skill} key={t}>
             {t}
           </span>
         ))}

@@ -1,11 +1,25 @@
 :root {
-    /* Colours */
-    --color-text: #fff;
-    --color-primary: #576cbc;
-    --color-secondary: #19376d;
-    --color-dark: #0b2447;
-    --color-bg: #04152d;
-  
-    /* Fonts */
-    --font-roboto: "Roboto";
-  }
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #ffffff;
+  --color-primary: #1d4ed8;
+  --color-secondary: #2563eb;
+  --color-dark: #000000;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --card: #1e1e1e;
+  --color-primary: #4f8aff;
+  --color-secondary: #3071e7;
+  --color-dark: #f1f1f1;
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

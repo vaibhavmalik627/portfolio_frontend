@@ -9,17 +9,18 @@
 
 html {
   scroll-behavior: smooth;
-  background: #f7f8fa;
+  background: var(--bg);
 }
 
 body {
-  font-family: 'Outfit', 'Inter', 'Lato', Arial, Helvetica, sans-serif;
-  color: #23272f;
-  background: #f7f8fa;
+  font-family: 'Poppins', 'Inter', 'Lato', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Main App Layout */
@@ -27,6 +28,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 4rem 0;
 }
 
 /* Main Content */
@@ -36,6 +38,27 @@ main {
   margin: 0 auto;
   max-width: 900px;
   padding: 40px 16px 0 16px;
+}
+
+/* Section Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Links */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #60a5fa;
+  outline: none;
 }
 
 /* Headings */
@@ -165,4 +188,16 @@ h3 {
     opacity: 1;
     transform: none;
   }
+}
+/* index.css */
+
+body {
+  font-family: 'Poppins', 'Inter', 'Lato', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

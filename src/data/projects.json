@@ -1,26 +1,34 @@
 [
   {
-    "title": "Project A",
+    "title": "AIReviewer",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "An AI-powered code review tool built with React and Express.js. Integrates Google Gemini AI to automatically analyze code snippets, highlighting bugs, suggesting improvements, and enforcing best practices. Features a user-friendly web interface and robust backend API for real-time, intelligent code review.",
+    "skills": ["React", "Express"],
+    "demo": "https://github.com/vaibhavmalik627/AIReviewer",
+    "source": ""
   },
   {
-    "title": "Project B",
+    "title": "Grocery Application",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "A comprehensive online grocery management platform using JavaScript. Enables users to browse, search, and purchase groceries, with features such as user authentication, shopping cart, and an admin dashboard for product and inventory management. Focuses on e-commerce functionality and a smooth user experience.",
+    "skills": ["JavaScript"],
+    "demo": "https://github.com/vaibhavmalik627/grocery_app",
+    "source": ""
   },
   {
-    "title": "Project C",
+    "title": "real_time-tracker",
     "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "description": "A real-time location tracking web app using Node.js, Express, Socket.IO, and Leaflet.js. Displays users’ live positions on an interactive map, with instant updates for all connected clients. Supports mobile devices and shows user presence and disconnection events.",
+    "skills": ["Node.js", "Express", "Socket.IO", "Leaflet.js"],
+    "demo": "",
+    "source": "https://github.com/vaibhavmalik627/real_time-tracker"
+  },
+  {
+    "title": "Drive Project",
+    "imageSrc": "projects/project.png",
+    "description": "A web-based file storage and management app built with EJS and JavaScript. Enables users to upload, organize, and manage files through a browser interface. Features server-side rendering with EJS and interactive frontend and backend logic.",
+    "skills": ["EJS", "JavaScript", "Frontend", "Backend"],
+    "demo": "https://example.com/drive-demo",
+    "source": "https://github.com/yourusername/drive-project"
   }
 ]

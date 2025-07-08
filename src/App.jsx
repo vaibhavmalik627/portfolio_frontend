@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Skills from "./components/Skills"; // Import Skills from flat structure
 import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
+import Contact from './components/Contact/Contact.jsx';
 
 function App() {
   return (

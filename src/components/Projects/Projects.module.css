@@ -1,64 +1,59 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 1rem 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.heading {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .card {
-  background: #fff;
+  background: var(--card);
   border-radius: 16px;
-  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.09);
-  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  padding: 2rem;
+  flex: 1 1 300px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: box-shadow 0.18s, transform 0.18s;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .card:hover {
-  box-shadow: 0 8px 28px 0 rgba(44, 62, 80, 0.15);
-  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 40px var(--shadow-light);
+  transform: translateY(-8px) scale(1.05);
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #23272f;
-  margin: 0 0 0.5rem 0;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.description {
-  color: #4a4f5c;
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
-
-.tech {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
-
-.badge {
-  background: #eaf0ff;
-  color: #3071e7;
-  border-radius: 12px;
-  padding: 4px 12px;
-  font-size: 0.98rem;
-  font-weight: 500;
-}
-
-.links {
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.link {
-  color: #3071e7;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.18s;
-  padding-bottom: 1px;
-  border-bottom: 1.5px solid #3071e7;
-}
-
-.link:hover {
-  color: #225bcc;
-  border-bottom: 1.5px solid #225bcc;
+.card {
+  animation: fadeInUp 0.6s ease forwards;
 }

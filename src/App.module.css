@@ -1,13 +1,14 @@
 .app {
   font-family: 'Inter', 'Lato', Arial, sans-serif;
-  background: linear-gradient(135deg,#f7f8fa 70%, #e8ecf5 100%);
-  color: #23272f;
+  background: var(--card);
+  color: var(--color-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* Soft fade-in animation for the whole app */
   opacity: 0;
   animation: appFadeIn 0.8s cubic-bezier(.4,0,.2,1) forwards;
+  scroll-behavior: smooth;
 }
 @keyframes appFadeIn {
   to {
@@ -20,19 +21,19 @@ main {
   width: 100%;
   margin: 0 auto;
   max-width: 900px;
-  padding: 40px 16px 0 16px;
+  padding: 80px 16px 0 16px;
   /* Section fade-in on scroll: apply .fade-in class in React for effect */
 }
 
 .footer {
   text-align: center;
   padding: 32px 0 16px 0;
-  color: #6f7683;
+  color: var(--color-secondary);
   font-size: 0.98rem;
   background: none;
   letter-spacing: 0.01em;
-  border-top: 1px solid #e4e8ef;
-  background: #fafbfc;
+  border-top: 1px solid var(--card);
+  background: var(--card);
   /* Subtle fade-in for footer */
   opacity: 0;
   transform: translateY(40px);
