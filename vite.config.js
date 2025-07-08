@@ -7,5 +7,10 @@ export default defineConfig({
     modules: {
       localsConvention: "camelCase" // ✅ No semicolon here
     }
+  },
+  build: {
+    rollupOptions: {
+      external: ['react-router-dom']
+    }
   }
 });
